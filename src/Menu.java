@@ -22,7 +22,7 @@ public class Menu {
 
 
     /**
-     * Bekéri a felhasználótól egy egész számot. Amíg a felhasználó nem ad be egy érvényes egész számot,
+     * Bekér a felhasználótól egy egész számot. Amíg a felhasználó nem ad be egy érvényes egész számot,
      * addig folyamatosan kéri az újabb bevitelt.
      * @return Az olvasott egész szám.
      */
