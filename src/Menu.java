@@ -273,12 +273,24 @@ public class Menu {
                 } else {
                     System.out.println("Hibás bevitel. Kérlek csak 'i' vagy 'n' választ adj!");
                 }
-            } else {
+            } else { // itt gyors implementálok egy safeguardot rosszul beütött dekodolási kulcs javításásra 
                 System.out.print("\nKérlek, add meg a dekódolási kulcsot: ");
                 key = scanner.nextLine();
                 System.out.println("\n\nGyőződj meg róla, hogy ez a kulcs az, amivel a titkosítást végezték!");
-                System.out.print("\nNyomj Enter-t a folytatáshoz...");
-                scanner.nextLine(); // Várakozik az Enter megnyomására
+                System.out.print("Helyesen ütötted be a dekódolási kulcsot? [i/n]: ");
+                String answ = scanner.nextLine();
+                switch (answ) {
+                    case "i":
+                        break;
+
+                    case "n":
+                        continue;
+                    
+                
+                    default:
+                        System.out.println("\nKérlek válaszolj *i*  vagy *n* betükkel!!\n");
+                        continue;
+                }
                 break;
             }
             
